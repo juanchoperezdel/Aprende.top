@@ -9,7 +9,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   return (
-    <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden bg-white">
+    <section className="relative pt-20 pb-16 md:pt-48 md:pb-32 overflow-hidden bg-white">
       {/* Background Decor - Minimalist Pink Gradient */}
       <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-pink-50 via-transparent to-transparent -z-10"></div>
 
