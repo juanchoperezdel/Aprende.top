@@ -27,9 +27,8 @@ const StickyCTA: React.FC<StickyCTAProps> = ({ onCtaClick }) => {
     <div className="fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-md border-t border-gray-100 md:hidden flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)] animate-slide-up">
       <div className="flex flex-col">
         <div className="flex items-center space-x-1 mb-1">
-          <span className="text-[10px] font-bold text-red-500 animate-pulse">🔥 Oferta termina en:</span>
           <span className="text-xs font-mono font-bold text-gray-900 bg-gray-100 px-1 rounded">
-            {format(timeLeft.minutes)}:{format(timeLeft.seconds)}
+            {minutes}:{seconds}
           </span>
         </div>
         <div className="flex items-baseline space-x-2">
