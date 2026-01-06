@@ -1,17 +1,15 @@
 
 import React from 'react';
 
+import { useCountdown } from '@/hooks/useCountdown';
+
 interface StickyCTAProps {
   onCtaClick: () => void;
 }
 
 const StickyCTA: React.FC<StickyCTAProps> = ({ onCtaClick }) => {
   const [isVisible, setIsVisible] = React.useState(false);
-  const [timeLeft, setTimeLeft] = React.useState({
-    hours: 0,
-    minutes: 27,
-    seconds: 45
-  });
+  const { minutes, seconds } = useCountdown();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -22,21 +20,6 @@ const StickyCTA: React.FC<StickyCTAProps> = ({ onCtaClick }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
-        if (prev.minutes > 0) return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        if (prev.hours > 0) return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        return prev;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const format = (n: number) => n.toString().padStart(2, '0');
 
   if (!isVisible) return null;
 
