@@ -47,7 +47,7 @@ const Pricing: React.FC = () => {
               </ul>
               <div className="text-center">
                 <p className="text-pink-200 line-through mb-1 font-bold tracking-widest text-xs uppercase">VALOR REAL: $127.00 USD</p>
-                <div className="text-6xl font-black mb-3">$40.00 USD</div>
+                <div className="text-6xl font-black mb-3">$40 USD</div>
                 <p className="text-[10px] uppercase font-bold text-pink-200 mb-10 tracking-[0.2em]">Pago único - Acceso Inmediato</p>
                 <a 
                   href={purchaseLink} 
