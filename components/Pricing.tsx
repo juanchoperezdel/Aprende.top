@@ -59,7 +59,7 @@ const Pricing: React.FC = () => {
                   {/* Logos in white */}
                   <div className="flex gap-4 brightness-0 invert opacity-90">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" className="h-4" alt="Visa" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-6" alt="Mastercard" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" className="h-6" alt="Mastercard" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" className="h-5" alt="PayPal" />
                   </div>
                   <div className="flex items-center text-[10px] font-bold text-white/90 border-l border-white/20 pl-4 ml-2">
