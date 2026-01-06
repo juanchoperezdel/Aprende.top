@@ -203,7 +203,7 @@ const LandingPage: React.FC = () => {
                     <p className="text-[10px] mb-12 max-w-lg mx-auto leading-relaxed uppercase tracking-widest">Esta página no forma parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera.</p>
                     <div className="flex flex-wrap justify-center gap-8 text-xs font-bold">
                         <Link to="/politica-de-privacidad" className="hover:text-pink-600 transition-colors">Política de Privacidad</Link>
-                        <a href="#" className="hover:text-pink-600 transition-colors">Términos de Servicio</a>
+                        <Link to="/terminos-de-servicio" className="hover:text-pink-600 transition-colors">Términos de Servicio</Link>
                     </div>
                 </div>
             </footer>
