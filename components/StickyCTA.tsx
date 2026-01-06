@@ -6,17 +6,59 @@ interface StickyCTAProps {
 }
 
 const StickyCTA: React.FC<StickyCTAProps> = ({ onCtaClick }) => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [timeLeft, setTimeLeft] = React.useState({
+    hours: 0,
+    minutes: 27,
+    seconds: 45
+  });
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      // Show after scrolling past the hero section (approx 600px)
+      setIsVisible(window.scrollY > 600);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
+        if (prev.minutes > 0) return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+        if (prev.hours > 0) return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        return prev;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const format = (n: number) => n.toString().padStart(2, '0');
+
+  if (!isVisible) return null;
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white/95 backdrop-blur-md border-t border-gray-100 md:hidden flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-md border-t border-gray-100 md:hidden flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)] animate-slide-up">
       <div className="flex flex-col">
-        <span className="text-[10px] text-gray-400 line-through font-bold leading-none">$127 USD</span>
-        <span className="text-2xl font-black text-pink-600 leading-none mt-1">$40 <small className="text-[10px] text-gray-400 font-bold uppercase">USD</small></span>
+        <div className="flex items-center space-x-1 mb-1">
+          <span className="text-[10px] font-bold text-red-500 animate-pulse">🔥 Oferta termina en:</span>
+          <span className="text-xs font-mono font-bold text-gray-900 bg-gray-100 px-1 rounded">
+            {format(timeLeft.minutes)}:{format(timeLeft.seconds)}
+          </span>
+        </div>
+        <div className="flex items-baseline space-x-2">
+          <span className="text-[10px] text-gray-400 line-through font-bold leading-none">$127</span>
+          <span className="text-xl font-black text-pink-600 leading-none">$40 <small className="text-[9px] text-gray-500 font-bold uppercase">USD</small></span>
+        </div>
       </div>
-      <button 
+      <button
         onClick={onCtaClick}
-        className="bg-pink-600 text-white px-8 py-4 rounded-2xl font-black text-sm shadow-xl shadow-pink-100 active:scale-95 transition-all uppercase tracking-tight cursor-pointer"
+        className="bg-pink-600 text-white px-6 py-3 rounded-xl font-black text-xs shadow-xl shadow-pink-100 active:scale-95 transition-all uppercase tracking-tight cursor-pointer"
       >
-        RESERVAR AHORA
+        RESERVAR LUGAR
       </button>
     </div>
   );
