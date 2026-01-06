@@ -7,7 +7,7 @@ import Curriculum from './components/Curriculum';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import StickyCTA from './components/StickyCTA';
-import SupportChat from './components/SupportChat';
+
 import CountdownTimer from './components/CountdownTimer';
 
 const App: React.FC = () => {
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         <div className="text-xl md:text-2xl font-black text-gray-900 tracking-tight">
           Aprende<span className="text-pink-600">.top</span>
         </div>
-        <button 
+        <button
           onClick={() => scrollToPricing()}
           className="hidden md:block bg-pink-600 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-pink-700 transition-all cursor-pointer"
         >
@@ -59,7 +59,7 @@ const App: React.FC = () => {
               <h2 className="text-center text-3xl md:text-6xl font-black mb-16 leading-tight text-gray-900">
                 ¿Es este <span className="text-pink-600 italic">tu momento</span> de brillar?
               </h2>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
                 {[
                   { icon: "✨", title: "Apasionada", desc: "Amas el maquillaje y quieres técnicas pro." },
@@ -84,10 +84,10 @@ const App: React.FC = () => {
         <section className="py-24 bg-beauty-pink overflow-hidden relative">
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
             <div className="md:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop" 
-                alt="Maquillaje Profesional" 
-                className="rounded-3xl shadow-2xl" 
+              <img
+                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop"
+                alt="Maquillaje Profesional"
+                className="rounded-3xl shadow-2xl"
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left">
@@ -95,7 +95,7 @@ const App: React.FC = () => {
               <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
                 El maquillaje no oculta quién eres, revela tu mejor versión. Deja de sentirte insegura y empieza a proyectar la mujer imparable que llevas dentro.
               </p>
-              <button 
+              <button
                 onClick={() => scrollToPricing()}
                 className="inline-block bg-pink-600 text-white px-12 py-5 rounded-2xl font-black text-lg transition-all hover:bg-pink-700 active:scale-95 shadow-xl shadow-pink-200 cursor-pointer"
               >
@@ -109,7 +109,7 @@ const App: React.FC = () => {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-center text-3xl md:text-6xl font-black mb-16 italic text-gray-900">Resultados <span className="text-pink-600">Innegables</span></h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
               <div className="aspect-video bg-gray-100 rounded-3xl overflow-hidden shadow-xl">
                 <iframe src="https://player.vimeo.com/video/878989450?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen className="w-full h-full" title="Testimonio Diana"></iframe>
@@ -143,7 +143,7 @@ const App: React.FC = () => {
           <div className="mb-14">
             <CountdownTimer />
           </div>
-          <button 
+          <button
             onClick={() => scrollToPricing()}
             className="w-full max-w-lg bg-pink-600 text-white text-center py-6 rounded-2xl font-black text-xl transition-all shadow-xl hover:bg-pink-700 active:scale-95 uppercase cursor-pointer"
           >
@@ -152,9 +152,9 @@ const App: React.FC = () => {
         </div>
 
         <BonusSection />
-        
+
         <Pricing />
-        
+
         <FAQ />
 
         {/* Last Chance CTA */}
@@ -162,7 +162,7 @@ const App: React.FC = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-7xl font-black mb-8 leading-none">¿Estás lista para <br /> <span className="italic text-pink-600">cambiar tu vida</span>?</h2>
             <p className="text-xl text-gray-500 mb-12 max-w-xl mx-auto">Únete a más de 1,400 mujeres que ya dominan el arte del automaquillaje.</p>
-            <button 
+            <button
               onClick={() => scrollToPricing()}
               className="inline-block bg-pink-600 text-white px-12 py-6 rounded-2xl font-black text-xl hover:bg-pink-700 transition-all shadow-2xl active:scale-95 uppercase cursor-pointer"
             >
@@ -209,7 +209,7 @@ const App: React.FC = () => {
       </footer>
 
       <StickyCTA onCtaClick={scrollToPricing} />
-      <SupportChat />
+
     </div>
   );
 };
