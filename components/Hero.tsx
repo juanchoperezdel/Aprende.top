@@ -15,11 +15,11 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-block px-4 py-1.5 bg-pink-50 border border-pink-100 rounded-full mb-8">
+          <div className="inline-block px-4 py-1.5 bg-pink-50 border border-pink-100 rounded-full mb-8" data-aos="fade-down" data-aos-delay="100">
             <p className="text-[10px] md:text-xs font-bold text-pink-600 uppercase tracking-widest">Oferta Especial de Lanzamiento</p>
           </div>
 
-          <h1 className="text-4xl md:text-8xl font-black mb-6 tracking-tighter leading-none text-gray-900">
+          <h1 className="text-4xl md:text-8xl font-black mb-6 tracking-tighter leading-none text-gray-900" data-aos="fade-up" data-aos-delay="200">
             Domina el Arte del <br className="hidden md:block" />
             <span className="italic font-serif text-pink-600">Automaquillaje</span>
           </h1>

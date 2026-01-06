@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import LandingPage from './pages/LandingPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // ScrollToTop Component to reset scroll on route change
 const ScrollToTop = () => {
@@ -17,6 +19,15 @@ const ScrollToTop = () => {
 };
 
 const App: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true, // Animates only once while scrolling down
+      duration: 800, // Animation duration
+      easing: 'ease-out-cubic',
+      offset: 100,
+    });
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />

@@ -49,13 +49,17 @@ const LandingPage: React.FC = () => {
             </header>
 
             <main>
-                <Hero onCtaClick={scrollToPricing} />
-                <Stats />
+                <div data-aos="fade-up">
+                    <Hero onCtaClick={scrollToPricing} />
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <Stats />
+                </div>
 
                 {/* Sección "Para quién es" */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
+                        <div className="max-w-4xl mx-auto" data-aos="fade-up">
                             <h2 className="text-center text-3xl md:text-6xl font-black mb-16 leading-tight text-gray-900">
                                 ¿Es este <span className="text-pink-600 italic">tu momento</span> de brillar?
                             </h2>
@@ -69,7 +73,12 @@ const LandingPage: React.FC = () => {
                                     { icon: "🌱", title: "Principiante", desc: "Aprendes desde cero, paso a paso." },
                                     { icon: "🛡️", title: "Piel Sensible", desc: "Aprende a cuidar y elegir productos." }
                                 ].map((item, idx) => (
-                                    <div key={idx} className="p-8 bg-gray-50 rounded-3xl flex flex-col items-center text-center hover:bg-pink-50 transition-colors group">
+                                    <div
+                                        key={idx}
+                                        className="p-8 bg-gray-50 rounded-3xl flex flex-col items-center text-center hover:bg-pink-50 transition-colors group"
+                                        data-aos="fade-up"
+                                        data-aos-delay={idx * 100}
+                                    >
                                         <span className="text-4xl mb-4">{item.icon}</span>
                                         <h3 className="font-bold text-lg text-gray-900 mb-2">{item.title}</h3>
                                         <p className="text-xs text-gray-500 font-medium leading-relaxed">{item.desc}</p>
@@ -83,14 +92,14 @@ const LandingPage: React.FC = () => {
                 {/* Sección de Transformación */}
                 <section className="py-24 bg-beauty-pink overflow-hidden relative">
                     <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
-                        <div className="md:w-1/2">
+                        <div className="md:w-1/2" data-aos="fade-right">
                             <img
                                 src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop"
                                 alt="Maquillaje Profesional"
                                 className="rounded-3xl shadow-2xl"
                             />
                         </div>
-                        <div className="md:w-1/2 text-center md:text-left">
+                        <div className="md:w-1/2 text-center md:text-left" data-aos="fade-left">
                             <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">Domina el <span className="text-pink-600">espejo</span></h2>
                             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
                                 El maquillaje no oculta quién eres, revela tu mejor versión. Deja de sentirte insegura y empieza a proyectar la mujer imparable que llevas dentro.
