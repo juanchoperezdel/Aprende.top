@@ -66,12 +66,12 @@ const LandingPage: React.FC = () => {
 
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
                                 {[
-                                    { icon: "✨", title: "Apasionada", desc: "Amas el maquillaje y quieres técnicas pro." },
-                                    { icon: "💰", title: "Ahorradora", desc: "No más gastos en maquilladores externos." },
-                                    { icon: "🦁", title: "Valiente", desc: "Buscas proyectar seguridad y confianza." },
-                                    { icon: "🚀", title: "Emprendedora", desc: "Quieres iniciar en la industria de la belleza." },
-                                    { icon: "🌱", title: "Principiante", desc: "Aprendes desde cero, paso a paso." },
-                                    { icon: "🛡️", title: "Piel Sensible", desc: "Aprende a cuidar y elegir productos." }
+                                    { icon: "🚀", title: "Emprendedora", desc: "Quieres iniciar un negocio rentable en el mundo de la belleza." },
+                                    { icon: "✨", title: "Apasionada", desc: "Amas el maquillaje y buscas perfeccionar tu técnica profesional." },
+                                    { icon: "🦁", title: "Valiente", desc: "Buscas proyectar seguridad y confianza en ti misma." },
+                                    { icon: "💰", title: "Inteligente", desc: "Quieres dejar de gastar en maquilladores y hacerlo tú misma." },
+                                    { icon: "🌱", title: "Principiante", desc: "Empiezas desde cero y quieres aprender paso a paso." },
+                                    { icon: "🛡️", title: "Detallista", desc: "Aprende lo mejor para tu tipo de piel y rostro." }
                                 ].map((item, idx) => (
                                     <div
                                         key={idx}
@@ -100,9 +100,9 @@ const LandingPage: React.FC = () => {
                             />
                         </div>
                         <div className="md:w-1/2 text-center md:text-left" data-aos="fade-left">
-                            <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">Domina el <span className="text-pink-600">espejo</span></h2>
+                            <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">Tu Futuro <span className="text-pink-600">Comienza Hoy</span></h2>
                             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
-                                El maquillaje no oculta quién eres, revela tu mejor versión. Deja de sentirte insegura y empieza a proyectar la mujer imparable que llevas dentro.
+                                El maquillaje es más que colores; es una herramienta poderosa para transformar tu carrera y elevar tu autoestima al máximo nivel.
                             </p>
                             <button
                                 onClick={() => scrollToPricing()}

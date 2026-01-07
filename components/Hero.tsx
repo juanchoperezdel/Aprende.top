@@ -20,12 +20,12 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           </div>
 
           <h1 className="text-4xl md:text-8xl font-black mb-6 tracking-tighter leading-none text-gray-900" data-aos="fade-up" data-aos-delay="200">
-            Domina el Arte del <br className="hidden md:block" />
-            <span className="italic font-serif text-pink-600">Automaquillaje</span>
+            Conviértete en una <br className="hidden md:block" />
+            <span className="italic font-serif text-pink-600">Experta del Maquillaje</span>
           </h1>
 
           <p className="text-lg md:text-2xl text-gray-500 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-            De cero a resultados profesionales desde casa, potencia tu seguridad y ahorra miles de dólares en productos mal elegidos.
+            Domina las técnicas para emprender tu propio negocio o simplemente para lucir espectacular cada día.
           </p>
 
           {/* Ultra-Sharp Video Container */}
